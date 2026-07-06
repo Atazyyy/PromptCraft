@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code2, Sparkles, Zap, Target, BookOpen, Gamepad2 } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Target, BookOpen, Gamepad2 } from 'lucide-react';
 import { Container, Section } from '../components/layout';
 import { Button, Card } from '../components/ui';
 import { lessons } from '../data/lessons';

@@ -1,9 +1,10 @@
-import { HTMLAttributes } from 'react';
-import { motion } from 'framer-motion';
+import { motion, MotionProps } from 'framer-motion';
 
-interface ToastProps extends HTMLAttributes<HTMLDivElement> {
+interface ToastProps extends MotionProps {
   variant?: 'success' | 'error' | 'warning' | 'info';
   title?: string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const variantStyles = {

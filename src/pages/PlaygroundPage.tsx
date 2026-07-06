@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Copy, Save, Trash2, Plus, BookOpen, Briefcase, Palette, Sparkles, Check, Code } from 'lucide-react';
+import { Copy, Save, Trash2, BookOpen, Briefcase, Palette, Sparkles, Check, Code } from 'lucide-react';
 import { Container, Section } from '../components/layout';
-import { Card, Button, Input, TextArea } from '../components/ui';
+import { Card, Button, Input } from '../components/ui';
 import { useProgress } from '../context/ProgressContext';
 import { promptTemplates } from '../data/templates';
 import { SavedPrompt } from '../types';

@@ -2,7 +2,6 @@ import { NavLink, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { BookOpen, Home, LayoutGrid, Trophy, Sparkles } from 'lucide-react';
 import { useProgress } from '../../context/ProgressContext';
-import { CircularProgress } from '../ui/Progress';
 
 const navLinks = [
   { to: '/', label: 'Home', icon: Home },

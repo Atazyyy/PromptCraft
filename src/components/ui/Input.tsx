@@ -1,13 +1,14 @@
-import { HTMLAttributes, forwardRef } from 'react';
+import { InputHTMLAttributes, forwardRef } from 'react';
 
-interface InputProps extends HTMLAttributes<HTMLInputElement> {
+interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   label?: string;
   error?: string;
   helperText?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, error, helperText, className = '', ...props }, ref) => {
+  ({ label, error, helperText, className = '', onChange, value, ...props }, ref) => {
     return (
       <div className="w-full">
         {label && (
@@ -27,6 +28,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             ${error ? 'border-accent-error focus:border-accent-error focus:ring-accent-error/20' : ''}
             ${className}
           `}
+          onChange={onChange}
+          value={value}
           {...props}
         />
         {error && (

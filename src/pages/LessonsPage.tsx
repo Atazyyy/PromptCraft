@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Clock, CheckCircle, Lock, Play, ChevronRight } from 'lucide-react';
 import { Container, Section } from '../components/layout';
 import { Card, DifficultyBadge } from '../components/ui';
-import { ProgressBar, CircularProgress } from '../components/ui/Progress';
+import { CircularProgress } from '../components/ui/Progress';
 import { useProgress } from '../context/ProgressContext';
 import { lessons } from '../data/lessons';
 

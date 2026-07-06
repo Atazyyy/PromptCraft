@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, CheckCircle, Clock, Lightbulb, AlertTriangle, Code, FileText, BookOpen } from 'lucide-react';
@@ -11,7 +11,6 @@ import { quizzes } from '../data/quizzes';
 
 export function LessonDetailPage() {
   const { lessonId } = useParams<{ lessonId: string }>();
-  const navigate = useNavigate();
   const { progress, completeLesson } = useProgress();
   const [showCompleteModal, setShowCompleteModal] = useState(false);
 

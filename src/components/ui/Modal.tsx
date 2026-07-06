@@ -1,13 +1,15 @@
-import { HTMLAttributes, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { Button } from './Button';
 
-interface ModalProps extends HTMLAttributes<HTMLDivElement> {
+interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const sizeStyles = {
@@ -18,7 +20,7 @@ const sizeStyles = {
 };
 
 export const Modal = forwardRef<HTMLDivElement, ModalProps>(
-  ({ isOpen, onClose, title, size = 'md', className = '', children, ...props }, ref) => {
+  ({ isOpen, onClose, title, size = 'md', className = '', children }, ref) => {
     return (
       <AnimatePresence>
         {isOpen && (
@@ -46,7 +48,6 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(
               animate={{ opacity: 1, scale: 1, y: '-50%' }}
               exit={{ opacity: 0, scale: 0.95, y: '-50%' }}
               transition={{ duration: 0.2 }}
-              {...props}
             >
               {/* Header */}
               {title && (
@@ -59,7 +60,7 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(
               )}
 
               {/* Content */}
-              <div className={title ? 'p-6' : 'p-6'}>
+              <div className="p-6">
                 {children}
               </div>
             </motion.div>

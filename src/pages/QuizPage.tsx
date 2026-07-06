@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, CheckCircle, XCircle, Trophy, RotateCcw } from 'lucide-react';
@@ -11,8 +11,7 @@ import { lessons } from '../data/lessons';
 
 export function QuizPage() {
   const { quizId } = useParams<{ quizId: string }>();
-  const navigate = useNavigate();
-  const { progress, completeQuiz } = useProgress();
+  const { completeQuiz } = useProgress();
 
   const quiz = quizzes.find(q => q.id === quizId);
   const lesson = quiz ? lessons.find(l => l.id === quiz.lessonId) : null;
@@ -23,7 +22,6 @@ export function QuizPage() {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
   const [answers, setAnswers] = useState<number[]>([]);
-  const [quizCompleted, setQuizCompleted] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
   if (!quiz || !lesson) {
@@ -63,7 +61,6 @@ export function QuizPage() {
       setShowExplanation(false);
     } else {
       completeQuiz(quiz.id, score);
-      setQuizCompleted(true);
       setTimeout(() => setShowResults(true), 1000);
     }
   };
@@ -73,7 +70,6 @@ export function QuizPage() {
     setSelectedAnswer(null);
     setShowExplanation(false);
     setAnswers([]);
-    setQuizCompleted(false);
     setShowResults(false);
   };
 
