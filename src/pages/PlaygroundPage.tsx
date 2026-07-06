@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Copy, Save, Trash2, BookOpen, Briefcase, Palette, Sparkles, Check, Code } from 'lucide-react';
+import { Copy, Save, Trash2, BookOpen, Briefcase, Palette, Sparkles, Check, Code, Globe } from 'lucide-react';
 import { Container, Section } from '../components/layout';
 import { Card, Button, Input } from '../components/ui';
 import { useProgress } from '../context/ProgressContext';
@@ -12,6 +12,7 @@ const categoryIcons = {
   'social-media': BookOpen,
   'business': Briefcase,
   'creative': Palette,
+  'website': Globe,
 };
 
 const categoryLabels = {
@@ -19,6 +20,7 @@ const categoryLabels = {
   'social-media': 'Social Media',
   'business': 'Business',
   'creative': 'Creative',
+  'website': 'Website',
 };
 
 export function PlaygroundPage() {
@@ -30,7 +32,7 @@ export function PlaygroundPage() {
   const [copied, setCopied] = useState(false);
   const [showSaveModal, setShowSaveModal] = useState(false);
 
-  const categories = ['all', 'starter', 'social-media', 'business', 'creative'];
+  const categories = ['all', 'starter', 'social-media', 'business', 'creative', 'website'];
 
   const filteredTemplates = selectedCategory === 'all'
     ? promptTemplates
@@ -159,12 +161,14 @@ export function PlaygroundPage() {
                             template.category === 'starter' ? 'bg-accent-primary/20' :
                             template.category === 'social-media' ? 'bg-accent-success/20' :
                             template.category === 'business' ? 'bg-accent-warning/20' :
+                            template.category === 'website' ? 'bg-accent-secondary/20' :
                             'bg-accent-secondary/20'
                           }`}>
                             <Icon className={`w-5 h-5 ${
                               template.category === 'starter' ? 'text-accent-primary' :
                               template.category === 'social-media' ? 'text-accent-success' :
                               template.category === 'business' ? 'text-accent-warning' :
+                              template.category === 'website' ? 'text-accent-secondary' :
                               'text-accent-secondary'
                             }`} />
                           </div>

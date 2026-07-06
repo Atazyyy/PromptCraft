@@ -36,7 +36,7 @@ export interface PromptTemplate {
   id: string;
   title: string;
   description: string;
-  category: 'starter' | 'social-media' | 'business' | 'creative';
+  category: 'starter' | 'social-media' | 'business' | 'creative' | 'website';
   template: string;
   variables: string[];
 }

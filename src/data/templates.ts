@@ -1,6 +1,479 @@
 import { PromptTemplate } from '../types';
 
 export const promptTemplates: PromptTemplate[] = [
+
+  // Website Templates
+  {
+    id: 'website-landing',
+    title: 'Landing Page Copy',
+    description: 'Generate copy untuk landing page yang conversion',
+    category: 'website',
+    template: `Generate landing page copy untuk:
+
+**Brand/Product:** {{brand_name}}
+**Product/Service:** {{product_name}}
+**Tagline:** {{tagline}}
+
+**Target Audience:**
+- Demographics: {{demographics}}
+- Pain points: {{pain_points}}
+- Goals: {{goals}}
+
+**Tone:** {{tone}} (bold/soft/professional/playful)
+**Goal:** {{goal}} (generate leads/sell product/build awareness)
+
+---
+
+## Hero Section
+**Headline:** [Compelling headline - max 10 words]
+**Subheadline:** [Supporting statement - 1-2 sentences]
+**CTA Button:** [Button text]
+
+---
+
+## Problem Section
+**Headline:** [Problem headline]
+[2-3 paragraphs explaining the problem]
+
+---
+
+## Solution Section
+**Headline:** [Solution headline]
+[Explanation of how product solves the problem]
+
+---
+
+## Features/Benefits Section
+**Headline:** [Features headline]
+
+| Feature | Benefit | Icon Suggestion |
+|---------|---------|-----------------|
+| [Feature 1] | [Benefit] | [Icon] |
+| [Feature 2] | [Benefit] | [Icon] |
+| [Feature 3] | [Benefit] | [Icon] |
+
+---
+
+## Social Proof Section
+**Headline:** [Trust headline]
+
+### Testimonials:
+1. "[Quote]" - [Name], [Role/Company]
+2. "[Quote]" - [Name], [Role/Company]
+3. "[Quote]" - [Name], [Role/Company]
+
+### Stats:
+- [Stat 1]
+- [Stat 2]
+- [Stat 3]
+
+---
+
+## Pricing Section (if applicable)
+**Headline:** [Pricing headline]
+
+| Package | Price | Features |
+|---------|-------|----------|
+| [Basic] | [Price] | [Features] |
+| [Pro] | [Price] | [Features] |
+| [Enterprise] | [Price] | [Features] |
+
+---
+
+## FAQ Section
+**Headline:** [FAQ headline]
+
+**Q1:** [Question]
+**A1:** [Answer]
+
+**Q2:** [Question]
+**A2:** [Answer]
+
+**Q3:** [Question]
+**A3:** [Answer]
+
+---
+
+## CTA Section
+**Headline:** [Final CTA headline]
+**Subtext:** [Supporting text]
+**Primary CTA:** [Button text]
+**Secondary CTA:** [Optional secondary action]
+
+---
+
+## Footer
+- Logo
+- Quick links
+- Social media
+- Contact info
+- Copyright`,
+    variables: ['brand_name', 'product_name', 'tagline', 'demographics', 'pain_points', 'goals', 'tone', 'goal']
+  },
+  {
+    id: 'website-portfolio',
+    title: 'Portfolio Page',
+    description: 'Generate content untuk halaman portfolio personal',
+    category: 'website',
+    template: `Generate portfolio page content untuk:
+
+**Name:** {{name}}
+**Title:** {{title}}
+**Specialization:** {{specialization}}
+**Years Experience:** {{years_experience}}
+
+**About You:**
+{{about_yourself}}
+
+**Target Client:** {{target_client}}
+**Tone:** {{tone}} (professional/casual/creative)
+
+---
+
+## Hero Section
+**Headline:** [Your tagline - 5-10 words]
+**Subheadline:** [1 sentence about who you help]
+
+---
+
+## About Section
+[2-3 paragraphs about your background, expertise, and passion]
+
+**Skills/Tools:**
+- [Skill 1]
+- [Skill 2]
+- [Skill 3]
+- [Skill 4]
+- [Skill 5]
+
+---
+
+## Services Section
+**Headline:** What I Do
+
+| Service | Description | Ideal For |
+|---------|-------------|----------|
+| [Service 1] | [Description] | [Client type] |
+| [Service 2] | [Description] | [Client type] |
+| [Service 3] | [Description] | [Client type] |
+
+---
+
+## Portfolio/Work Section
+**Headline:** Selected Works
+
+### Project 1: [Project Name]
+- Client/Type: [Description]
+- Challenge: [What problem you solved]
+- Solution: [Your approach]
+- Result: [Outcome/Impact]
+
+### Project 2: [Project Name]
+[Same structure]
+
+### Project 3: [Project Name]
+[Same structure]
+
+---
+
+## Testimonials Section
+**Headline:** What Clients Say
+
+1. "[Quote]"
+   — [Name], [Company/Role]
+
+2. "[Quote]"
+   — [Name], [Company/Role]
+
+---
+
+## Contact Section
+**Headline:** Let's Work Together
+**Subheadline:** [Compelling reason to reach out]
+
+**Contact Info:**
+- Email: [email]
+- Phone: [number]
+- Location: [location]
+- Availability: [status]
+
+**Social Links:**
+- [Platform 1]: [link]
+- [Platform 2]: [link]
+
+---
+
+## CTA
+[Call to action - what you want visitors to do next]`,
+    variables: ['name', 'title', 'specialization', 'years_experience', 'about_yourself', 'target_client', 'tone']
+  },
+  {
+    id: 'website-about',
+    title: 'About Us Page',
+    description: 'Generate konten halaman about us untuk company',
+    category: 'website',
+    template: `Generate About Us page content untuk:
+
+**Company Name:** {{company_name}}
+**Industry:** {{industry}}
+**Founded:** {{founded}}
+**Location:** {{location}}
+**Size:** {{company_size}}
+
+**Company Story:**
+{{story}}
+
+**Mission:** {{mission}}
+**Vision:** {{vision}}
+**Values:** {{values}}
+
+**Tone:** {{tone}} (professional/friendly/bold/innovative)
+
+---
+
+## Hero Section
+**Headline:** [2-3 sentences about who you are]
+
+---
+
+## Our Story Section
+[3-4 paragraphs telling the company story]
+
+**Key Milestones:**
+| Year | Milestone |
+|------|-----------|
+| [Year] | [Event] |
+| [Year] | [Event] |
+| [Year] | [Event] |
+| [Year] | [Event] |
+
+---
+
+## Mission & Vision Section
+**Our Mission:**
+[2-3 sentences about your mission]
+
+**Our Vision:**
+[2-3 sentences about your future goal]
+
+---
+
+## Our Values Section
+**Headline:** What We Believe
+
+| Value | Title | Description |
+|-------|-------|-------------|
+| 1 | [Value Name] | [Description] |
+| 2 | [Value Name] | [Description] |
+| 3 | [Value Name] | [Description] |
+| 4 | [Value Name] | [Description] |
+
+---
+
+## Team Section (optional)
+**Headline:** Meet the Team
+
+### [Team Member Name]
+- Role: [Position]
+- [2-3 sentences about their background]
+
+---
+
+## Achievements Section
+**Headline:** Our Achievements
+
+- [Achievement 1]
+- [Achievement 2]
+- [Achievement 3]
+
+---
+
+## Contact CTA
+**Headline:** [Call to action headline]
+**Subtext:** [Supporting text]`,
+    variables: ['company_name', 'industry', 'founded', 'location', 'company_size', 'story', 'mission', 'vision', 'values', 'tone']
+  },
+  {
+    id: 'website-coming-soon',
+    title: 'Coming Soon Page',
+    description: 'Generate halaman coming soon yang menarik',
+    category: 'website',
+    template: `Generate Coming Soon page content untuk:
+
+**Brand Name:** {{brand_name}}
+**What\'s Coming:** {{product_feature}}
+**Launch Date:** {{launch_date}}
+**Platform:** {{platform}} (website/app/product)
+
+**Social Media:** {{social_links}}
+**Contact Email:** {{email}}
+
+---
+
+## Main Content
+
+**Logo:** [Brand logo]
+
+**Headline:**
+[Exciting headline about what\'s coming - 5-10 words]
+
+**Subheadline:**
+[1-2 sentences building anticipation]
+
+---
+
+## Countdown (if applicable)
+[Launch date countdown display]
+
+---
+
+## Email Signup Section
+
+**Headline:** Be the First to Know
+
+**Form Copy:**
+"Enter your email to get notified when we launch"
+
+**Button Text:** [Notify Me/Get Early Access/Join Waitlist]
+
+**Privacy Note:**
+[Brief reassurance about not spamming]
+
+---
+
+## Social Proof (optional)
+
+**Sneak Peek Headline:** What to Expect
+
+[Brief teaser of features/benefits - 3-4 bullet points]
+
+---
+
+## Social Links Section
+
+**Headline:** Follow Us for Updates
+
+- [Instagram]
+- [Twitter/X]
+- [TikTok]
+- [LinkedIn]
+
+---
+
+## Contact Section (optional)
+
+**Questions?** [contact email/link]
+
+---
+
+## Footer
+
+© {{year}} {{brand_name}}. All rights reserved.
+
+[Privacy Policy] | [Terms of Service]`,
+    variables: ['brand_name', 'product_feature', 'launch_date', 'platform', 'social_links', 'email', 'year']
+  },
+  {
+    id: 'website-faq',
+    title: 'FAQ Page',
+    description: 'Generate halaman FAQ yang engaging',
+    category: 'website',
+    template: `Generate FAQ page content untuk:
+
+**Brand Name:** {{brand_name}}
+**Product/Service:** {{product_service}}
+**Industry:** {{industry}}
+
+**Common Questions:**
+{{common_questions}}
+
+**Tone:** {{tone}} (professional/friendly/helpful)
+
+---
+
+## Hero Section
+
+**Headline:** Frequently Asked Questions
+
+**Subheadline:**
+"Everything you need to know about [product/service]"
+
+---
+
+## Categories Section
+
+### Getting Started
+
+**Q1:** [Question about getting started]
+**A:** [Clear, helpful answer - 2-4 sentences]
+
+**Q2:** [Question]
+**A:** [Answer]
+
+---
+
+### Product/Service Details
+
+**Q1:** [Question about features/usage]
+**A:** [Answer]
+
+**Q2:** [Question]
+**A:** [Answer]
+
+**Q3:** [Question]
+**A:** [Answer]
+
+---
+
+### Pricing & Plans
+
+**Q1:** [Question about pricing]
+**A:** [Answer]
+
+**Q2:** [Question about payment methods]
+**A:** [Answer]
+
+**Q3:** [Question about refunds]
+**A:** [Answer]
+
+---
+
+### Technical Support
+
+**Q1:** [Question about technical issues]
+**A:** [Answer]
+
+**Q2:** [Question]
+**A:** [Answer]
+
+---
+
+### Shipping/Delivery (if applicable)
+
+**Q1:** [Question about shipping]
+**A:** [Answer]
+
+**Q2:** [Question about tracking]
+**A:** [Answer]
+
+---
+
+### Contact CTA
+
+**Headline:** Still have questions?
+
+**Subheadline:**
+"Can't find what you're looking for? We're here to help!"
+
+**CTA Button:** [Contact Us/Ask a Question/Get in Touch]
+
+**Contact Info:**
+- Email: [email]
+- Phone: [number]
+- Hours: [availability]`,
+    variables: ['brand_name', 'product_service', 'industry', 'common_questions', 'tone']
+  },
+
   // Starter Templates
   {
     id: 'starter-basic',
