@@ -686,7 +686,7 @@ Contoh use case: Email sequences, SOP documents, meeting agenda, content calenda
 Title: Instagram Caption Generator
 Category: Social Media
 Version: 2.1
-Last Updated: 2024-01-15
+Last Updated: 2026-01-15
 Success Rate: 90%
 
 ## Use Case

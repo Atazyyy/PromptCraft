@@ -293,7 +293,7 @@ export function HomePage() {
               Made with ❤️ for learning Prompt Engineering
             </p>
             <p className="text-text-secondary text-sm">
-              © 2024 PromptCraft. Portfolio project by @Atazyyy
+              © 2026 PromptCraft. Portfolio project by @Atazyyy
             </p>
           </div>
         </Container>
