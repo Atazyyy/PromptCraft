@@ -31,8 +31,8 @@ Ditampilkan dalam pengalaman belajar yang interaktif dengan lessons, quiz, dan p
 - Butuh 80% untuk lulus
 
 ### 🎨 Prompt Playground
-- 15+ templates siap pakai
-- Kategori: Starter, Social Media, Business, Creative
+- 16+ templates siap pakai
+- Kategori: Starter, Social Media, Business, Creative, Analysis
 - Save dan load prompts
 - Copy ke clipboard
 

@@ -1032,5 +1032,93 @@ Best regards,
 - Scenes: {{scene_count}}
 - Characters: {{character_count}}`,
     variables: ['type', 'format', 'genre', 'length', 'tone', 'protagonist', 'main_goal', 'central_conflict', 'setting', 'audience', 'theme_1', 'theme_2', 'runtime', 'scene_count', 'character_count']
+  },
+
+  // Analysis Templates
+  {
+    id: 'analysis-deep-research',
+    title: 'Deep Research Report',
+    description: 'Generate laporan riset mendalam dari data besar',
+    category: 'analysis',
+    template: `Lakukan deep research analysis untuk:
+
+**Topic/Topic:** {{topic}}
+**Scope:** {{scope}}
+**Target Audience:** {{audience}}
+
+**Research Questions:**
+1. {{question_1}}
+2. {{question_2}}
+3. {{question_3}}
+
+**Data Sources Available:**
+{{data_sources}}
+
+**Output Requirements:**
+- Tone: {{tone}} (professional/accessible/technical)
+- Depth: {{depth}} (overview/detailed/comprehensive)
+- Include: {{include_elements}}
+
+---
+
+## Research Report Structure
+
+# [Topic Title] - Research Report
+
+## Executive Summary
+[2-3 paragraph overview]
+- Key findings (3-5 bullet points)
+- Main recommendations
+
+## 1. Introduction
+- Research context
+- Objectives
+- Methodology overview
+
+## 2. Data Analysis
+### 2.1 [Data Category 1]
+[Analysis findings]
+
+### 2.2 [Data Category 2]
+[Analysis findings]
+
+### 2.3 [Data Category 3]
+[Analysis findings]
+
+## 3. Key Findings
+| Finding | Evidence | Implication |
+|---------|----------|-------------|
+| [Finding 1] | [Evidence] | [Implication] |
+| [Finding 2] | [Evidence] | [Implication] |
+| [Finding 3] | [Evidence] | [Implication] |
+
+## 4. Patterns & Insights
+### 4.1 Major Patterns Identified
+1. [Pattern 1]
+2. [Pattern 2]
+3. [Pattern 3]
+
+### 4.2 Unexpected Findings
+[Any surprising discoveries]
+
+## 5. Implications & Recommendations
+### For Strategy
+1. [Recommendation 1]
+2. [Recommendation 2]
+
+### For Operations
+1. [Recommendation 1]
+
+### For Future Research
+[Any gaps identified]
+
+## 6. Conclusion
+[Summary of key takeaways]
+
+## Appendix
+- Raw data summary
+- Methodology details
+- Limitations`,
+    variables: ['topic', 'scope', 'audience', 'question_1', 'question_2', 'question_3', 'data_sources', 'tone', 'depth', 'include_elements']
   }
 ];
