@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Target, BookOpen, Gamepad2 } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Target, BookOpen, Gamepad2, Github, ExternalLink, Mail } from 'lucide-react';
 import { Container, Section } from '../components/layout';
 import { Button, Card } from '../components/ui';
 import { lessons } from '../data/lessons';
@@ -289,6 +289,17 @@ export function HomePage() {
       <footer className="py-8 border-t border-bg-tertiary">
         <Container>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-6">
+              <a href="https://github.com/Atazyyy/PromptCraft" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-white transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-white transition-colors">
+                <ExternalLink className="w-5 h-5" />
+              </a>
+              <a href="mailto:agnimiftahfauza@gmail.com" className="text-text-secondary hover:text-white transition-colors">
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
             <p className="text-text-secondary text-sm">
               Made with ❤️ for learning Prompt Engineering
             </p>

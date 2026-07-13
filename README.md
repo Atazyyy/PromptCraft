@@ -4,11 +4,17 @@
 ![React](https://img.shields.io/badge/React-18-61dafb?style=flat-square&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6?style=flat-square&logo=typescript)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.0-38b2ac?style=flat-square&logo=tailwind-css)
+![Vercel](https://img.shields.io/badge/Vercel-Deploy-black?style=flat-square&logo=vercel)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![Last Commit](https://img.shields.io/github/last-commit/Atazyyy/PromptCraft?style=flat-square)
 
 > Platform pembelajaran interaktif untuk belajar Prompt Engineering dengan cara yang menyenangkan!
 
 ![Cover](public/cover.png)
+
+## 🚀 Demo
+
+**Live Demo:** [promptcraft.vercel.app](https://promptcraft.vercel.app)
 
 ## 🎯 Apa itu PromptCraft?
 

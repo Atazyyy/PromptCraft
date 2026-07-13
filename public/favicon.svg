@@ -5,7 +5,25 @@
       <stop offset="50%" style="stop-color:#8b5cf6"/>
       <stop offset="100%" style="stop-color:#d946ef"/>
     </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
   </defs>
-  <rect width="100" height="100" rx="20" fill="url(#grad)"/>
-  <text x="50" y="65" font-family="system-ui" font-size="50" font-weight="bold" fill="white" text-anchor="middle">P</text>
+  <!-- Background -->
+  <rect width="100" height="100" rx="22" fill="url(#grad)"/>
+  <!-- Prompt/Edit Icon -->
+  <g filter="url(#shadow)">
+    <!-- Document base -->
+    <path d="M25 20 L60 20 L75 35 L75 75 C75 78 72 80 70 80 L30 80 C27 80 25 78 25 75 L25 25 C25 22 27 20 30 20 Z" fill="white" opacity="0.95"/>
+    <!-- Lines -->
+    <rect x="32" y="35" width="36" height="4" rx="2" fill="#6366f1"/>
+    <rect x="32" y="45" width="28" height="3" rx="1.5" fill="#a5b4fc" opacity="0.8"/>
+    <rect x="32" y="54" width="32" height="3" rx="1.5" fill="#a5b4fc" opacity="0.8"/>
+    <rect x="32" y="63" width="20" height="3" rx="1.5" fill="#a5b4fc" opacity="0.8"/>
+    <!-- Pencil overlay -->
+    <g transform="translate(60, 55) rotate(45)">
+      <rect x="0" y="0" width="8" height="28" rx="2" fill="#fbbf24"/>
+      <polygon points="0,28 4,36 8,28" fill="#f59e0b"/>
+    </g>
+  </g>
 </svg>
